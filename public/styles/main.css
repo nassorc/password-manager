@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+:root {
+  --bg-primary: #fff8f0;
+  --bg-secondary: #f4d06f;
+  --text-primary: #333333;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: horizontal;
+}
+li {
+  list-style: none;
+  padding: 0;
+}
+div.nav__container {
+  background: cadetblue;
+  padding: 3rem 0 2rem 0;
+  width: 64px;
+  flex-shrink: 0;
+}
+nav.side-bar {
+  background: lightblue;
+}
+nav.side-bar > ul {
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  width: 75%;
+  min-width: 800px;
+}
+
+.container-header {
+  display: flex;
+  flex-direction: space-between;
+}
+
+.password-item {
+  display: flex;
+  flex-direction: row;
+}
+
+.password-item__info {
+  display: flex;
+}
