@@ -1,7 +1,9 @@
-const generator = require('generator-password');
-const Password = Object.freeze({
-    generate: generator.generate,
-})
-const a = Password.generate({length: 10, numbers: true})
+const generator = require('generate-password');
 
-// module.exports = Password
+const Password = Object.freeze({
+    generate: generator.generate
+})
+
+module.exports = Password
+
+// console.log(Password.generate({length: 16, numbers: true}))

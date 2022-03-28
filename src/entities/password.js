@@ -1,8 +1,10 @@
 module.exports = function buildMakeUser({Password} ) {
+    const length = 16
+    const number = true
     return function makePassword({
         service,
         email,
-        password = Password.generate(),
+        password = Password.generate({length, number}),
     } ={}) {
         if(!service) {
             throw new Error('Password must have a service name')
@@ -13,7 +15,7 @@ module.exports = function buildMakeUser({Password} ) {
         return Object.freeze({
             getService: () => service,
             getEmail: () => email,
-            getPassword: () => generatePassword
+            getPassword: () => password
         })
     }
 }

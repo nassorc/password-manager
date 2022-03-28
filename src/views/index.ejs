@@ -18,7 +18,9 @@
     </div>
     <main class="container">
         <h1 class="container-title">Password Manager</h1>
-        <%- include('partials/_add-password-form') %>
+        <form action="/p/post" method="POST">
+            <%- include('partials/_add-password-form') %>
+        </form>
         <div class="grid-container">
             <div class="grid-container__header"><p>Site</p></div>
             <div class="grid-container__header"><p>Email</p></div>

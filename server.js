@@ -45,13 +45,17 @@ app.get('/:userId', (req, res) => {
     res.render('index', {passwords: passwords})
 })
 app.post('/p/post', (req, res) => {
-    // use model to create a new password before 
-    // adding to database
+    // must be logged in
+    // use id for searching
+    // append to passwordlist
     console.log('posted a new password')
     console.log(req.body)
     passwords.push(req.body)
     console.log(passwords)
     res.sendStatus(201)
+})
+app.post('/u/create', (req, res) => {
+    // create new user
 })
 
 app.listen(PORT, () => {
