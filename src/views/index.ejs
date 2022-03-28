@@ -18,25 +18,44 @@
     </div>
     <main class="container">
         <h1 class="container-title">Password Manager</h1>
-        <div class="container-header">
-            <span><p>Site</p></span>
-            <span><p>Email</p></span>
-            <span><p>Key</p></span>
-        </div>
-        <div class="password-container">
+        <%- include('partials/_add-password-form') %>
+        <div class="grid-container">
+            <div class="grid-container__header"><p>Site</p></div>
+            <div class="grid-container__header"><p>Email</p></div>
+            <div class="grid-container__header"><p>Key</p></div>
+
             <div class="password-item">
                 <div class="password-item__info">
                     <div class="password-item__info-site">Google</div>
                     <div class="password-item__info-email">tam@gmail.com</div>
-                    <div class="password-item__info-key">someKey</div>
+                    <div class="password-item__info-password hidden">someKey</div>
                 </div>
                 <div class="password-item__buttons">
-                    <button class="reveal">eye</button>
+                    <button class="btn-reveal">eye</button>
+                    <button class="">copy</button>
+
                     <button class="edit">penwriting</button>
                     <button class="delete">garbage</button>
                 </div>
             </div>
+
+            <div class="password-item">
+                <div class="password-item__info">
+                    <div class="password-item__info-site">Google</div>
+                    <div class="password-item__info-email">tam@gmail.com</div>
+                    <div class="password-item__info-password hidden">someKey</div>
+                </div>
+                <div class="password-item__buttons">
+                    <button class="btn-reveal">eye</button>
+                    <button class="">copy</button>
+
+                    <button class="edit">penwriting</button>
+                    <button class="delete">garbage</button>
+                </div>
+            </div>
+   
         </div>
     </main>
+    <script src="/public/src/index.js"></script>
 </body>
 </html>

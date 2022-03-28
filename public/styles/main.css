@@ -40,16 +40,46 @@ main {
   min-width: 800px;
 }
 
-.container-header {
-  display: flex;
-  flex-direction: space-between;
+.hidden {
+  visibility: hidden;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 2fr;
+  grid-auto-rows: 50px;
+  gap: 4px;
+}
+
+.grid-container__header {
+  margin: 0 auto;
 }
 
 .password-item {
+  grid-column: 1 / 5;
   display: flex;
   flex-direction: row;
 }
+.password-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 2fr;
+  grid-template-areas: "info info info buttons";
+}
 
 .password-item__info {
+  grid-area: info;
   display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.password-item__buttons {
+  margin-right: 8px;
+  grid-area: buttons;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: flex-end;
+}
+.password-item__info-password {
+  user-select: all;
 }

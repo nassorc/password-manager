@@ -13,8 +13,14 @@
 **Buttons**
 
 -[] View hashed password
+_ displays modal of password
 -[] edit password
+_ displays a small box containing buttons to edit password
 -[] delete password
+
+- deletes password
+  -[] copy
+  -copies the password to clipboard
 
 ## web UI
 
